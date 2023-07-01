@@ -1,7 +1,10 @@
 <script>
 	import { fly } from 'svelte/transition'
 
-	const navLinks = ['Services', 'About', 'Contact']
+	const navLinks = [{
+		title: 'Avaliação gratuita',
+		href: "/avaliacao"
+	}]
 	let isShow = false
 </script>
 
@@ -9,14 +12,14 @@
 	<div
 		class="flex items-center justify-between px-8 mx-auto space-x-32 lg:justify-start lg:px-0 lg:max-w-5xl xl:max-w-7xl"
 	>
-		<div class="flex items-center space-x-1 cursor-pointer">
-			<img src="/images/logo.png" alt="Logo" width={38} height={38} />
-			<h1 class="text-2xl font-bold transition duration-300 hover:opacity-75">waterworks</h1>
-		</div>
+		<a class="flex items-center space-x-1 cursor-pointer" href="/">
+			<img src="/images/logo.png" alt="Logo" width={78} height={78} />
+			<!-- <h1 class="text-2xl font-bold transition duration-300 hover:opacity-75">waterworks</h1> -->
+		</a>
 
 		<div class="hidden space-x-16 md:flex">
 			{#each navLinks as navLink}
-				<a href="/" class="font-medium transition duration-300 hover:text-gray-600">{navLink}</a>
+				<a href={navLink.href} class="font-medium transition duration-300 hover:text-gray-600">{navLink.title}</a>
 			{/each}
 		</div>
 		<div class="block md:hidden">
@@ -35,9 +38,9 @@
 		<div class="z-30 flex flex-col items-center justify-center w-full h-full space-y-12">
 			{#each navLinks as navLink}
 				<a
-					href="/"
+					href={navLink.href}
 					class="text-4xl font-bold text-white transition duration-300 hover:text-gray-600"
-					>{navLink}</a
+					>{navLink.title}</a
 				>
 			{/each}
 		</div>
