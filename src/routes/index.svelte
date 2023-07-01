@@ -9,7 +9,7 @@
 	<img
 		src="/images/apple.png"
 		alt="Right Graphic"
-		class="hidden lg:block absolute right-40 top-40 "
+		class="hidden sm:block absolute right-40 top-40 "
 	/>
 	<!-- <img src="/images/iphone_cable.png" alt="Right Graphic" class="lg:hidden absolute right-0 top-40 " /> -->
 	<!-- <img src="/images/crab.png" alt="Crab" class="absolute left-0 hidden xl:block top-1/4" /> -->
@@ -37,7 +37,7 @@
 			<img src="/images/hero-image-mobile.png" class="absolute -bottom-4 -left-3" alt="Hero" />
 		</div> -->
 	</div>
-	<div class="flex justify-evenly" >
+	<div class="justify-evenly hidden sm:flex" >
 		<img
 			src="/images/apple-tv.svg"
 			class="transform transition duration-300 hover:scale-110 cursor-pointer"
